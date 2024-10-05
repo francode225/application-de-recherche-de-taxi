@@ -32,16 +32,13 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
-    }
+     public function driver(){
+         return $this->hasOne(Driver::class);
+     }
+
+     public function trip(){
+         return $this->hasMany(Trip::class);
+     }
+
+
 }
