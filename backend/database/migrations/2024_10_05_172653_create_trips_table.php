@@ -17,10 +17,8 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(User::class);
             $table->foreignIdFor(Driver::class);
-            $table->string('depart');
             $table->boolean('debutee')->default(false);
             $table->boolean('terminee')->default(false);
-            $table->boolean('debute')->default(false);
             $table->json('origine')->nullable();
             $table->json('destination')->nullable();
             $table->string('destination_name')->nullable();
