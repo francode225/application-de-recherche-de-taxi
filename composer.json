@@ -1,0 +1,5 @@
+{
+    "require": {
+        "laravel-notification-channels/twilio": "^3.4"
+    }
+}

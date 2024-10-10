@@ -10,6 +10,14 @@ class Trip extends Model
     use HasFactory;
     protected $guarded = [];
 
+    protected $casts = [
+        'origine' => 'array',
+        'destination' => 'array',
+        'driver_location' => 'array',
+        'debutee' => 'boolean',
+        'terminee' => 'boolean',
+    ];
+
     public function user(){
         return $this->belongsTo(User::class);
     }
