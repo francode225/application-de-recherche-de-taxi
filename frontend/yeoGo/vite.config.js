@@ -13,6 +13,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
+  // c'est ce bput de code qui a resolu le problme de fast-depp-equal
   optimizeDeps: {
     include: [
       "@fawmi/vue-google-maps",

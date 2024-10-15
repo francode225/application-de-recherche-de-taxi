@@ -1,6 +1,7 @@
 <script setup>
 import {usePositionStore} from "@/stores/position.js";
-
+import {useRouter} from "vue-router";
+const router = useRouter()
 const position = usePositionStore()
 const traitementChangementPosition = (e) =>{
   console.log('traitementChangementPosition', e)
@@ -17,9 +18,14 @@ const traitementChangementPosition = (e) =>{
 }
 
 const traitementChoisirPosition = () =>{
-
+  if (position.destination.name !== ''){
+    router.push({
+      name: 'map'
+    })
+  }
+  console.log(position.majPositionActuelle);
 }
-
+//2H35
 </script>
 <template>
   <div class="pt-16">

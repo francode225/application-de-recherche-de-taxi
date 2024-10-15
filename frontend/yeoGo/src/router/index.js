@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import connexionView from '@/views/connexionView.vue'
 import LandingView from '@/views/LandingView.vue'
 import PositionView from '@/views/PositionView.vue'
+import MapView from '@/views/MapView.vue'
 import axios from "axios";
 
 const router = createRouter({
@@ -21,6 +22,11 @@ const router = createRouter({
       path: '/position',
       name: 'position',
       component: PositionView,
+    },
+    {
+      path:'/map',
+      name:'map',
+      component: MapView
     }
   ]
 })
